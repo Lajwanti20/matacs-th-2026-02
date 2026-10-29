@@ -12,14 +12,14 @@ The goal is to make proposal evaluations consistent, transparent, explainable, a
 
 ## 2. Assessment Deliverables
 
-- **Process Flow Diagram:** [View Diagram](diagram/process-flow.png)
+- **Process Flow Diagram:** [View Diagram](diagram/process-flow.svg)
 - **Design Write-up:** [Read Write-up](WRITEUP.md)
 - **AI Prompts:** [View Prompts](PROMPTS.md)
 - **Proposal Ranking Results:** [View Ranking JSON](ranking.json)
 
 ### Process Flow Diagram
 
-![AI Proposal Triage Process Flow](diagram/process-flow.png)
+![AI Proposal Triage Process Flow](diagram/process-flow.svg)
 
 ## 3. System Approach
 
