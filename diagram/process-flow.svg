@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="3400" viewBox="0 0 800 3400">
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="6" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#f3f3f3"/>
+    </marker>
+    <style>
+      .bg { fill: #020b1a; }
+      .box { fill: #040d1a; stroke: #f5f5f5; stroke-width: 3; }
+      .diamond { fill: #040d1a; stroke: #f5f5f5; stroke-width: 3; }
+      .text { fill: #f5f5f5; font-family: Arial, Helvetica, sans-serif; font-size: 28px; text-anchor: middle; dominant-baseline: middle; }
+      .small { font-size: 24px; }
+      .line { stroke: #f5f5f5; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+      .branch { stroke: #f5f5f5; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+    </style>
+  </defs>
+
+  <rect class="bg" width="800" height="3400" x="0" y="0"/>
+
+  <!-- Start box -->
+  <rect class="box" x="170" y="30" width="460" height="90"/>
+  <text class="text" x="400" y="75">Upload Contractor</text>
+  <text class="text" x="400" y="110">Proposal</text>
+
+  <line class="line" x1="400" y1="120" x2="400" y2="170"/>
+
+  <!-- Extract info -->
+  <rect class="box" x="250" y="190" width="300" height="90"/>
+  <text class="text" x="400" y="230">AI Extracts</text>
+  <text class="text" x="400" y="265">Proposal</text>
+  <text class="text" x="400" y="300">Information</text>
+
+  <line class="line" x1="400" y1="280" x2="400" y2="340"/>
+
+  <!-- Validate -->
+  <rect class="box" x="190" y="360" width="420" height="100"/>
+  <text class="text" x="400" y="395">Validate Extracted</text>
+  <text class="text" x="400" y="430">Fields and Source</text>
+  <text class="text" x="400" y="465">Evidence</text>
+
+  <line class="line" x1="400" y1="460" x2="400" y2="535"/>
+
+  <!-- Missing or suspicious diamond -->
+  <polygon class="diamond" points="400,560 235,690 400,820 565,690"/>
+  <text class="text" x="400" y="675">Missing or</text>
+  <text class="text" x="400" y="715">Suspicious</text>
+  <text class="text" x="400" y="755">Information?</text>
+
+  <!-- Branches -->
+  <line class="branch" x1="400" y1="820" x2="310" y2="930"/>
+  <line class="branch" x1="400" y1="820" x2="490" y2="930"/>
+
+  <!-- Yes/No labels -->
+  <text class="text small" x="285" y="930">Yes</text>
+  <text class="text small" x="515" y="930">No</text>
+
+  <!-- Left branch box -->
+  <rect class="box" x="120" y="950" width="270" height="110"/>
+  <text class="text" x="255" y="995">Flag for Human</text>
+  <text class="text" x="255" y="1035">Review</text>
+
+  <!-- Right branch to deterministic rules -->
+  <rect class="box" x="370" y="950" width="280" height="110"/>
+  <text class="text" x="510" y="995">Apply</text>
+  <text class="text" x="510" y="1035">Deterministic</text>
+  <text class="text" x="510" y="1075">Rules</text>
+
+  <line class="branch" x1="350" y1="1060" x2="350" y2="1165"/>
+  <line class="branch" x1="450" y1="1060" x2="450" y2="1165"/>
+
+  <!-- Mandatory requirements? diamond -->
+  <polygon class="diamond" points="400,1180 230,1340 400,1500 570,1340"/>
+  <text class="text" x="400" y="1310">Mandatory</text>
+  <text class="text" x="400" y="1355">Requirements</text>
+  <text class="text" x="400" y="1400">Passed?</text>
+
+  <!-- Mandatory branches -->
+  <line class="branch" x1="400" y1="1500" x2="215" y2="1625"/>
+  <line class="branch" x1="400" y1="1500" x2="585" y2="1625"/>
+  <text class="text small" x="250" y="1625">No</text>
+  <text class="text small" x="550" y="1625">Yes</text>
+
+  <!-- No branch to Mark Ineligible -->
+  <rect class="box" x="40" y="1650" width="270" height="110"/>
+  <text class="text" x="175" y="1695">Mark Ineligible</text>
+
+  <!-- Yes branch to weighted scoring -->
+  <rect class="box" x="335" y="1650" width="335" height="110"/>
+  <text class="text" x="502" y="1695">Apply Configured</text>
+  <text class="text" x="502" y="1735">Weighted Scoring</text>
+
+  <line class="line" x1="470" y1="1760" x2="470" y2="1845"/>
+
+  <!-- Generate scores -->
+  <rect class="box" x="315" y="1870" width="290" height="100"/>
+  <text class="text" x="460" y="1910">Generate Scores,</text>
+  <text class="text" x="460" y="1945">Ranking and</text>
+  <text class="text" x="460" y="1980">Reasons</text>
+
+  <line class="line" x1="460" y1="1970" x2="460" y2="2040"/>
+
+  <!-- Human reviewer boxes -->
+  <rect class="box" x="300" y="2065" width="320" height="100"/>
+  <text class="text" x="460" y="2105">Human Reviewer</text>
+  <text class="text" x="460" y="2140">Checks Results</text>
+
+  <line class="line" x1="460" y1="2165" x2="460" y2="2250"/>
+
+  <!-- Reviewer accepts diamond -->
+  <polygon class="diamond" points="460,2280 300,2435 460,2590 620,2435"/>
+  <text class="text" x="460" y="2405">Reviewer Accepts</text>
+  <text class="text" x="460" y="2455">Results?</text>
+
+  <line class="branch" x1="460" y1="2590" x2="250" y2="2710"/>
+  <line class="branch" x1="460" y1="2590" x2="670" y2="2710"/>
+  <text class="text small" x="288" y="2708">No</text>
+  <text class="text small" x="633" y="2708">Yes</text>
+
+  <!-- Left no branch -->
+  <rect class="box" x="120" y="2735" width="260" height="120"/>
+  <text class="text" x="250" y="2780">Correct Evidence</text>
+  <text class="text" x="250" y="2820">or Record Override</text>
+
+  <!-- Right yes branch -->
+  <rect class="box" x="470" y="2735" width="270" height="120"/>
+  <text class="text" x="605" y="2780">Record Final</text>
+  <text class="text" x="605" y="2820">Decision and Audit</text>
+  <text class="text" x="605" y="2860">Log</text>
+
+  <line class="line" x1="605" y1="2855" x2="605" y2="2955"/>
+
+  <!-- Final box -->
+  <rect class="box" x="470" y="2980" width="270" height="110"/>
+  <text class="text" x="605" y="3025">Human Makes</text>
+  <text class="text" x="605" y="3065">Final Award</text>
+  <text class="text" x="605" y="3105">Decision</text>
+</svg>
