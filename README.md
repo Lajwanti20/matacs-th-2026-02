@@ -2,7 +2,7 @@
 
 **Candidate:** Lajwanti Hindu Lohana  
 **Assessment Reference:** MATACS-TH-2026-02  
-**Time Spent:** [Enter your actual total time]
+**Time Spent:** 60 Minutes
 
 ## 1. Overview
 
